@@ -1,0 +1,8 @@
+const data = [
+    { id: 1,title:"one", name: "Soubhagya Ranjan Tarai", description: " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque id dicta, corrupti commodi, libero necessitatibus, ad ab illum saepe officia voluptatum. Perspiciatis eius voluptate voluptatum doloremque repellat ad odio delectus." },
+    { id: 1 + 1,title:"two", name: "Soubhagya Ranjan Tarai", description: " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque id dicta, corrupti commodi, libero necessitatibus, ad ab illum saepe officia voluptatum. Perspiciatis eius voluptate voluptatum doloremque repellat ad odio delectus." },
+    { id: 1 + 2,title:"three", name: "Soubhagya Ranjan Tarai", description: " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque id dicta, corrupti commodi, libero necessitatibus, ad ab illum saepe officia voluptatum. Perspiciatis eius voluptate voluptatum doloremque repellat ad odio delectus." },
+    { id: 1 + 3,title:"four", name: "Soubhagya Ranjan Tarai", description: " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque id dicta, corrupti commodi, libero necessitatibus, ad ab illum saepe officia voluptatum. Perspiciatis eius voluptate voluptatum doloremque repellat ad odio delectus." },
+    { id: 1 + 4,title:"five", name: "Soubhagya Ranjan Tarai", description: " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque id dicta, corrupti commodi, libero necessitatibus, ad ab illum saepe officia voluptatum. Perspiciatis eius voluptate voluptatum doloremque repellat ad odio delectus." }
+]
+export default data;
