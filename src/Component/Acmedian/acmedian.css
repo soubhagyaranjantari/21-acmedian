@@ -14,7 +14,7 @@
     font-weight: bold;
     font-size: 16px;
     cursor: pointer;
-    background: linear-gradient(345deg, green, rgb(199, 46, 199), red, blue, rgb(245, 242, 242), aqua, yellow);
+    background: linear-gradient(45deg, rgb(96, 238, 96), rgb(245, 242, 242));
 }
 
 .item {
