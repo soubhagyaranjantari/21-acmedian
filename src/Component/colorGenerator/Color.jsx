@@ -6,7 +6,7 @@ const Color = () => {
   const colorUitil = (length) => {
     return Math.floor(Math.random() * length)
   }
-
+var a= 10;
   const createRandomHexColor = () => {
     const hexColor = [1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F']
     let hex = '#'
@@ -36,8 +36,8 @@ const Color = () => {
     setInput(e.target.value.toLowerCase())
   }
   const handleColor = () => {
-    if (typeOfColor === 'hex' ) {
-      createRandomHexColor() 
+    if (typeOfColor === 'hex') {
+      createRandomHexColor()
     }
     else createRandomRgbColor()
     setInput(null)
@@ -49,8 +49,8 @@ const Color = () => {
       background: input ? input : color
 
     }}>
-      <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', padding:"20px 0 0 0 "}}>
-        <input type="text" onChange={handleInput} placeholder='Type a color u want to set'/>
+      <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', padding: "20px 0 0 0 " }}>
+        <input type="text" onChange={handleInput} placeholder='Type a color u want to set' />
 
         <button style={{ padding: '10px 20px' }} onClick={() => setTypeOfColor('hex')}>
           HEX
