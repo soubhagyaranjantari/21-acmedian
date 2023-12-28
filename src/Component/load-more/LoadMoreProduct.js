@@ -20,24 +20,17 @@ const LoadMoreProduct = ({ limit = 10, skip = 10 }) => {
 
             );
             const result = await response.json()
-            console.log('test', result);
-            // setProduct((pre) => [...pre, ...result.products])
-            if (result && result.products && result.products.length) {
-                if (count === 0) {
-                    setProduct(result.products)
-                } else {
-                    setProduct((prevProducts) => [...prevProducts, ...result.products]);
-                }
-                setLoading(false);
-            }
+            console.log('count======', result.products);
+            setProduct((pre) => count === 0 ? result.products : [...pre, ...result.products])
+            setLoading(false);
             console.log(result);
         } catch (e) {
-            setLoading(false)
+            setLoading(true)
             console.log('error occoured in catch', e.message);
         }
     }
 
-    // console.log("test123", product);
+    console.log("test123", product);
 
     useEffect(() => {
         const timeOutId = setTimeout(() => {
@@ -73,7 +66,7 @@ const LoadMoreProduct = ({ limit = 10, skip = 10 }) => {
                         </div>
                         <div className="button-container">
                             <button disabled={disableButton} onClick={() => setCount(count + 1)}
-                            style={{padding:"20px",backgroundColor:'black',color:'white'}}>
+                                style={{ padding: "20px", backgroundColor: 'black', color: 'white' }}>
                                 Load More Products
                             </button>
                             {disableButton ? <p>You have reached 100 products</p> : null}

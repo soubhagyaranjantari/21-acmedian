@@ -5,11 +5,12 @@ import LoadMoreProduct from './Component/load-more/LoadMoreProduct';
 import Star from './Component/star-rating/Star';
 
 function App() {
+
   return (
     <div className="App">
-      {/* <Acmedian/> */}
-      {/* <Color /> */}
-      {/* <Star noOfStar={10}/> */}
+      {/* <Acmedian/>
+      <Color />
+      <Star noOfStar={10}/> */}
       <LoadMoreProduct/>
 
     </div>

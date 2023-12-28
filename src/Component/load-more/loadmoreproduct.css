@@ -34,7 +34,6 @@
     align-items: center;
 }
 
-/* LoadingAnimation.css */
 
 @keyframes bounce {
 
@@ -76,7 +75,6 @@
 .dot:nth-child(2) {
     animation-delay: 0.2s;
 }
-
 .dot:nth-child(3) {
     animation-delay: 0.4s;
 }
