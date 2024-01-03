@@ -1,45 +1,84 @@
-import { useState,  } from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { searchData } from "../Sclice";
+import { searchData } from "./redux/StarSclice";
+import { useEffect } from "react";
+
 const Planet = () => {
-  const [search,setSearch]=useState('')
-  const data=useSelector(state=>state.star)
-  const dispatch=useDispatch()
-  const handleSearch=(e)=>{
-    setSearch(e.target.value.toLowerCase())
-    dispatch(searchData(search))
-  }
+  const [search, setSearch] = useState("");
+  const dispatch = useDispatch();
+  
+  const handleInputChange = (e) => {
+    setSearch(e.target.value);
+    dispatch(searchData(search));
+  };
+//   const handleSearchData = () => {
+//     // Dispatch the searchData action with the search term
+//   };
+  useEffect(()=>{
+
+  },[])
+
+  const starData = useSelector((state) => state.star.starPlanet);
+  console.log('selector data in planet ', starData);
+
   return (
     <div>
-      <div>Search for planets </div>
+      <div style={{ width: '70%', marginTop: '10px',marginLeft:"40%" }}><h1>Search for planets</h1></div>
       <div>
-        <input id="search" type="text" placeholder="a" onChange={handleSearch}/>
+        <input
+        style={{ width: '20%',height:"20px", marginTop: '10px',marginLeft:"40%" }}
+          id="search"
+          type="text"
+          placeholder="Search"
+          onChange={handleInputChange}
+        />
       </div>
-      {/*
-        * Replace the section below with the results of the search
-        */}
-      <section>
-        <header>
-          <div className="col">Name</div>
-          <div className="col">Population</div>
-        </header>
-        <div>
-          {
-            data?.map((ele,ind)=>{
-              return(
-              <div key={ind}>
-                <div className="col">ele.results.name</div>
-                <div title={ele.results.population} className="col">{'\u{1F468}\u{1F468}\u{1F468}\u{1F468}\u{1F468}'}</div>
-              </div>
-              )
-            })
-          }
-        </div>
-      </section>
-      <br/>
-      <div className="error">No planet matching search term</div>
+
+      <table style={{ width: '70%', borderCollapse: 'collapse', marginTop: '10px',marginLeft:"13%" }}>
+        <thead style={{ backgroundColor: '#f2f2f2' }}>
+          <tr>
+            <th style={tableHeaderStyle}>Name</th>
+            <th style={tableHeaderStyle}>Population</th>
+          </tr>
+        </thead>
+        <tbody>
+          {starData? (
+            starData?.map((planet, index) => (
+              <tr key={index} style={index % 2 === 0 ? { backgroundColor: '#f9f9f9' } : { backgroundColor: 'white' }}>
+                <td style={tableCellStyle}>{planet.name}</td>
+                <td style={tableCellStyle} title={planet.population}>
+                  {'\u{1F468}\u{1F468}\u{1F468}\u{1F468}\u{1F468}'}
+                </td>
+              </tr>
+            ))
+          ) : (
+            <tr>
+              <td colSpan="2" className="error" style={errorStyle}>
+                No planet matching the search term
+              </td>
+            </tr>
+          )}
+        </tbody>
+      </table>
     </div>
-  )
-}
+  );
+};
 
 export default Planet;
+
+const tableHeaderStyle = {
+  padding: '10px',
+  borderBottom: '1px solid #ddd',
+};
+
+const tableCellStyle = {
+  padding: '10px',
+  textAlign: 'center',
+  borderBottom: '1px solid #ddd',
+};
+
+const errorStyle = {
+  padding: '10px',
+  textAlign: 'center',
+  color: 'red',
+};

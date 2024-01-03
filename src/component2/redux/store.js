@@ -1,11 +1,11 @@
 import { configureStore,  } from '@reduxjs/toolkit';
-import starWarsSlice from './Sclice'
+import StarSclice from './StarSclice';
+
 export const store = configureStore({
     // Create the reducer and add it here
     
     reducer: {
-            star:starWarsSlice
+            star:StarSclice
     }
     
 })
-// export default {fecthdata,searchData}=store.dispatch;
