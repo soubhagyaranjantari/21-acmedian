@@ -1,22 +1,18 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { searchData } from "./redux/StarSclice";
+import { fetchStarWarData, searchData } from "./redux/StarSclice";
 import { useEffect } from "react";
 
 const Planet = () => {
-  const [search, setSearch] = useState("");
+//   const [search, setSearch] = useState("");
   const dispatch = useDispatch();
   
   const handleInputChange = (e) => {
-    setSearch(e.target.value);
-    dispatch(searchData(search));
-  };
-//   const handleSearchData = () => {
-//     // Dispatch the searchData action with the search term
-//   };
-  useEffect(()=>{
 
-  },[])
+    dispatch(fetchStarWarData(e.target.value))
+  };
+
+
 
   const starData = useSelector((state) => state.star.starPlanet);
   console.log('selector data in planet ', starData);
@@ -47,7 +43,7 @@ const Planet = () => {
               <tr key={index} style={index % 2 === 0 ? { backgroundColor: '#f9f9f9' } : { backgroundColor: 'white' }}>
                 <td style={tableCellStyle}>{planet.name}</td>
                 <td style={tableCellStyle} title={planet.population}>
-                  {'\u{1F468}\u{1F468}\u{1F468}\u{1F468}\u{1F468}'}
+                  {'\u{1F468}'}
                 </td>
               </tr>
             ))

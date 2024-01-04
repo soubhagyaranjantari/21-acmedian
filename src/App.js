@@ -8,23 +8,23 @@ import AllRouter from './component2/Router';
 
 function App() {
 
-  const data=[
-    {'a':'a',b:'b',fff:'c1'},
-    {'avc':'a',b:'b',eee:'c2'},
-    {'asd':'kanhu',b:'b',ddd:'c22'},
-    {'sad':'a',b:'b',hhh:'c3'},
+  const data = [
+    { 'a': 'a', b: 'b', fff: 'c1' },
+    { 'avc': 'a', b: 'b', eee: 'c2' },
+    { 'asd': 'kanhu', b: 'b', ddd: 'c22' },
+    { 'sad': 'a', b: 'b', hhh: 'c3' },
   ]
-  let name='kanhu'
-  let pass="c2"
-  let check = data.some((e)=>{
-    return e.asd ===name && e.ddd===pass
+  let name = 'kanhu'
+  let pass = "c2"
+  let check = data.some((e) => {
+    return e.asd === name && e.ddd === pass
   })
-  console.log(check);
+  // console.log(check);
   return (
     <div className="App">
-      {/* <BrowserRouter>
-      <AllRouter/>
-      </BrowserRouter> */}
+      <BrowserRouter>
+        <AllRouter />
+      </BrowserRouter>
       {/* <Acmedian/>
       <Color />
       <Star noOfStar={10}/> */}
