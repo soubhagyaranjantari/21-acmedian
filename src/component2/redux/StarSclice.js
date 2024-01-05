@@ -44,11 +44,12 @@ export const fetchStarWarData = (searchTerm = '') => async (dispatch) => {
     try {
         const abortController = new AbortController();
         const signal = abortController.signal;
-        const response = await fetch(`https://swapi.dev/api/planets/?search=${searchTerm}`, { signal });
+        const response = await fetch(`https://swapi.dev/api/planets/`, { signal });
         //   https://swapi.dev/api/people/?search=Obi
         const result = await response.json();
         console.log("============", result.results);
         dispatch(fetchStarWarDataSuccess(result.results));
+        
     } catch (error) {
         console.error(error);
         console.log("========ERROR====", error);
