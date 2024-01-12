@@ -23,6 +23,8 @@ function App() {
     return e.asd === name && e.ddd === pass
   })
   // console.log(check);
+
+  console.log('kanhu');
   return (
     <div className="App">
       {/* <BrowserRouter>
