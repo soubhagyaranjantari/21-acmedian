@@ -5,6 +5,9 @@ import Color from './Component/colorGenerator/Color';
 import LoadMoreProduct from './Component/load-more/LoadMoreProduct';
 import Star from './Component/star-rating/Star';
 import AllRouter from './component2/Router';
+import QrCodeGenerator from './Component/qr-code-generator';
+import Switch_mode from './Component/dark-mode/Index';
+import ScrollIndicator from './custom-scroolbar';
 
 function App() {
 
@@ -22,14 +25,19 @@ function App() {
   // console.log(check);
   return (
     <div className="App">
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <AllRouter />
-      </BrowserRouter>
+      </BrowserRouter> */}
       {/* <Acmedian/>
       <Color />
       <Star noOfStar={10}/> */}
       {/* <LoadMoreProduct/> */}
 
+      {/* qrCode */}
+      {/* <QrCodeGenerator /> */}
+      {/* theme change */}
+      {/* <Switch_mode/> */}
+      <ScrollIndicator url={"https://dummyjson.com/products?limit=100"}/>
     </div>
   );
 }

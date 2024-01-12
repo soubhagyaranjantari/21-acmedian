@@ -1,0 +1,6 @@
+.qr{
+    display: flex;
+    align-items: center;
+    justify-content: Center;
+    flex-direction: column;
+}
