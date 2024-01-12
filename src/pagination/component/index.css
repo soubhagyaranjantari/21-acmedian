@@ -1,0 +1,54 @@
+/* Add this CSS to your global styles or component-specific styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.items-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item {
+    margin: 10px;
+    text-align: center;
+}
+
+.item-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    /* Ensure images maintain aspect ratio */
+    border-radius: 50%;
+    /* Make images circular */
+}
+
+.item-name {
+    display: block;
+    margin-top: 8px;
+}
+
+.pagination-controls {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* YourComponent.css */
+.current-page {
+    background-color: #007bff;
+    /* Change to your desired highlight color */
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .item {
+        width: 100%;
+    }
+}

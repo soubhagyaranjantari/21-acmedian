@@ -9,6 +9,7 @@ import QrCodeGenerator from './Component/qr-code-generator';
 import Switch_mode from './Component/dark-mode/Index';
 import ScrollIndicator from './Component/custom-scroolbar';
 import Modal from './Component/Modal.js/Modal';
+import YourComponent from './pagination/component';
 
 function App() {
 
@@ -42,7 +43,8 @@ function App() {
       {/* <Switch_mode/> */}
       {/* <ScrollIndicator url={"https://dummyjson.com/products?limit=100"}/> */}
       
-      <Modal/>
+      {/* <Modal/> */}
+      <YourComponent/>
     </div>
   );
 }
