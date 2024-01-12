@@ -7,7 +7,8 @@ import Star from './Component/star-rating/Star';
 import AllRouter from './component2/Router';
 import QrCodeGenerator from './Component/qr-code-generator';
 import Switch_mode from './Component/dark-mode/Index';
-import ScrollIndicator from './custom-scroolbar';
+import ScrollIndicator from './Component/custom-scroolbar';
+import Modal from './Component/Modal.js/Modal';
 
 function App() {
 
@@ -39,7 +40,9 @@ function App() {
       {/* <QrCodeGenerator /> */}
       {/* theme change */}
       {/* <Switch_mode/> */}
-      <ScrollIndicator url={"https://dummyjson.com/products?limit=100"}/>
+      {/* <ScrollIndicator url={"https://dummyjson.com/products?limit=100"}/> */}
+      
+      <Modal/>
     </div>
   );
 }
